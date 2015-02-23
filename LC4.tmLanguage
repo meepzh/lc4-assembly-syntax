@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>asm</string>
+	</array>
+	<key>name</key>
+	<string>LC4 Assembly</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>comment</key>
+			<string>Comments like ;</string>
+			<key>match</key>
+			<string>;.*</string>
+			<key>name</key>
+			<string>comment.line</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Registers like R#</string>
+			<key>match</key>
+			<string>R[0-7]</string>
+			<key>name</key>
+			<string>storage.type.register</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Instructions</string>
+			<key>match</key>
+			<string>\b(NOP|BRn|BRnz|BRnp|BRz|BRzp|BRp|BRnzp|ADD|MUL|SUB|DIV|CMP|CMPU|CMPI|CMPIU|JSR|JSRR|AND|NOT|OR|XOR|LDR|STR|RTI|CONST|SLL|SRA|SRL|MOD|JMPR|JMP|HICONST|TRAP|RET|LEA|LC)\b</string>
+			<key>name</key>
+			<string>entity.name.function.instruction</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Decimals like</string>
+			<key>match</key>
+			<string>#-?\d+</string>
+			<key>name</key>
+			<string>constant.numeric.dec</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Hexadecimals like x#### or 0x####</string>
+			<key>match</key>
+			<string>0?x[0-9A-F]{4}+</string>
+			<key>name</key>
+			<string>constant.numeric.hex</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Directives like .DATA</string>
+			<key>match</key>
+			<string>\.(DATA|CODE|ADDR|FALIGN|FILL|BLKW|CONST|UCONST)\b</string>
+			<key>name</key>
+			<string>keyword.directive</string>
+		</dict>
+	</array>
+	<key>scopeName</key>
+	<string>source.asm</string>
+	<key>uuid</key>
+	<string>fcf326bb-b28a-42f9-a112-b9265b2d0350</string>
+</dict>
+</plist>
