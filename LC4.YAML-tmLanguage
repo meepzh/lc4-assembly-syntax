@@ -18,9 +18,9 @@ patterns:
 - comment: Decimals like #1
   name: constant.numeric.dec
   match: '#-?\d+'
-- comment: Hexadecimals like x#### or 0x####
+- comment: Hexadecimals like x# or 0x####
   name: constant.numeric.hex
-  match: 0?x[0-9A-F]{4}+
+  match: 0?x[0-9A-F]{1,4}+
 - comment: Directives like .DATA
   name: keyword.directive
   match: \.(DATA|CODE|ADDR|FALIGN|FILL|BLKW|CONST|UCONST)\b

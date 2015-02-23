@@ -44,9 +44,9 @@
 		</dict>
 		<dict>
 			<key>comment</key>
-			<string>Hexadecimals like x#### or 0x####</string>
+			<string>Hexadecimals like x# or 0x####</string>
 			<key>match</key>
-			<string>0?x[0-9A-F]{4}+</string>
+			<string>0?x[0-9A-F]{1,4}+</string>
 			<key>name</key>
 			<string>constant.numeric.hex</string>
 		</dict>
