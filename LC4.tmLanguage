@@ -46,17 +46,33 @@
 			<key>comment</key>
 			<string>Hexadecimals like x# or 0x####</string>
 			<key>match</key>
-			<string>0?x[0-9A-F]{1,4}+</string>
+			<string>0?x[0-9a-fA-F]{1,4}+</string>
 			<key>name</key>
 			<string>constant.numeric.hex</string>
 		</dict>
 		<dict>
 			<key>comment</key>
+			<string>Binary numbers like b0001</string>
+			<key>match</key>
+			<string>[bB][01]+</string>
+			<key>name</key>
+			<string>constant.numeric.bin</string>
+		</dict>
+		<dict>
+			<key>comment</key>
 			<string>Directives like .DATA</string>
 			<key>match</key>
-			<string>\.(DATA|CODE|ADDR|FALIGN|FILL|BLKW|CONST|UCONST)\b</string>
+			<string>\.(DATA|CODE|ADDR|FALIGN|FILL|BLKW|CONST|UCONST|STRINGZ)\b</string>
 			<key>name</key>
 			<string>keyword.directive</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Strings like "Hello World!"</string>
+			<key>match</key>
+			<string>"[^"\n]*"</string>
+			<key>name</key>
+			<string>string.quoted.double</string>
 		</dict>
 	</array>
 	<key>scopeName</key>

@@ -20,8 +20,14 @@ patterns:
   match: '#-?\d+'
 - comment: Hexadecimals like x# or 0x####
   name: constant.numeric.hex
-  match: 0?x[0-9A-F]{1,4}+
+  match: 0?x[0-9a-fA-F]{1,4}+
+- comment: Binary numbers like b0001
+  name: constant.numeric.bin
+  match: '[bB][01]+'
 - comment: Directives like .DATA
   name: keyword.directive
-  match: \.(DATA|CODE|ADDR|FALIGN|FILL|BLKW|CONST|UCONST)\b
+  match: \.(DATA|CODE|ADDR|FALIGN|FILL|BLKW|CONST|UCONST|STRINGZ)\b
+- comment: Strings like "Hello World!"
+  name: string.quoted.double
+  match: '"[^"\n]*"'
 ...
